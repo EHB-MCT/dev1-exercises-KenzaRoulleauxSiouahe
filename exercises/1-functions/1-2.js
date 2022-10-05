@@ -17,7 +17,7 @@ context.beginPath();
     context.moveTo(50,200);
     context.lineTo(200, 200);
     context.moveTo(50,50);
-    context.strokeStyle = 'green';
+    context.strokeStyle = 'blue';
     context.lineWidth = 5;
     context.stroke();
    
