@@ -7,31 +7,60 @@ let context = canvas.getContext('2d');
 
 colorBox();
 function colorBox() {
+
+//links boven groot
 context.beginPath();
-    context.moveTo(50,50);
-    context.lineTo(50, 200);
-    context.moveTo(50,50);
-    context.lineTo(200, 50);
-    context.moveTo(200,50);
-    context.lineTo(200, 200);
-    context.moveTo(50,200);
-    context.lineTo(200, 200);
+    context.rect(50,50,150,150)
     context.strokeStyle = 'red';
     context.stroke();
 
-    context.beginPath();
-    context.moveTo(125,125);
-    context.lineTo(125, 275);
-    context.moveTo(125,125);
-    context.lineTo(275, 125);
-    context.moveTo(125,275);
-    context.lineTo(275, 275);
-    context.moveTo(275,125);
-    context.lineTo(275, 275);
-    
-   
-    context.fill();
+//links onder gemideld  
+context.beginPath();
+    context.rect(75,275,50,50)
     context.strokeStyle = 'red';
     context.stroke();
+
+//links onder klein
+context.beginPath();
+    context.rect(50,325,25,25)
+    context.strokeStyle = 'black';
+    context.fill();
+    context.stroke();
+
+//rechts boven gemmideld
+context.beginPath();
+    context.rect(275,75,50,50)
+    context.strokeStyle = 'red';
+    context.stroke();
+
+//rechts boven klein
+context.beginPath();
+    context.rect(325,50,25,25)
+    context.strokeStyle = 'black';
+    context.fill();
+    context.stroke();
+
+//rechts onder groot
+context.beginPath();
+    context.rect(200,200,150,150)
+    context.strokeStyle = 'red';
+    context.stroke();
+
+//midden groot
+context.beginPath();
+    context.rect(125,125,150,150)
+    context.strokeStyle = 'red';
+    context.fill();
+    context.stroke();
+
+
+
+
+
+
+
+
+
+
     
 }
