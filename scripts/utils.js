@@ -15,6 +15,7 @@ export function drawCircle (x,y,radius){
     context.fill();
 }
 
+
 /** function that formats an hsl value based on parameters
  * @param {number} h the hue in degrees
  * @param {number} s the saturation in percentage
@@ -57,9 +58,21 @@ export function rgba(r, g, b, a) {
 /** function that converts an angle in degrees to radians
  * @param {number} degrees 
  */
+
+export function hsla (h, s, l, a){
+    return "hsl("+ h + "," + s + "," + l + "," + a + ")";
+    
+}
+
+export function hsl(h, s, l) {
+    return "hsl(" + h + "," + s + "%," + l + "%)";
+}
+
+
 export function degrees(degrees) {
     return degrees * (Math.PI / 180);
 }
+
 
 /**
  * function that calculates the distance between 2 coordinates
@@ -68,27 +81,67 @@ export function degrees(degrees) {
  * @param {number} x2 x coordinate of the second point
  * @param {number} y2 y coordinate of the second point
  */
+
 export function calculateDistance(x1, y1, x2, y2) {
     return Math.hypot(x2 - x1, y2 - y1);
 }
+
 
 /**
  * function that returns a random whole number between a minimum and a maximumm value
  * @param {number} min minimum value
  * @param {number} max maximum value
  */
+
+
 export function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 /**
  * function that returns a structured random decimal number based on a Gaussian curve
  * Adapted from stackoverflow answer by Dorian: https://stackoverflow.com/a/39187274
  */
+
 export function randomGaussian() {
     var rand = 0;
 
     for (var i = 0; i < 6; i += 1) {
         rand += Math.random() * 2 - 1;
     }
+
+    return rand / 6;
 }
+
+export function fillCircle(x, y, radius) {
+    fillEllipse(x, y, radius, radius);
+}
+
+export function strokeCircle(x, y, radius) {
+    strokeEllipse(x, y, radius, radius);
+}
+
+export function fillEllipse(x, y, rX, rY) {
+    context.beginPath();
+    context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
+    context.fill();
+}
+
+export function fillAndStrokeCircle(x, y, radius) {
+    fillCircle(x, y, radius);
+    strokeCircle(x, y, radius);
+}
+
+export function fillAndStrokeEllipse(x, y, w, h) {
+    fillEllipse(x, y, w, h);
+    strokeCircle(x, y, w, h);
+
+}
+
+//export function drawLine(x1, y1, x2, y2) {
+  //  context.beginPath();
+    //context.moveTo(x1, y1);
+    //context.lineTo(x2, y2);
+    //context.stroke();
+//}

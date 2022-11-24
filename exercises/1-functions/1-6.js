@@ -30,7 +30,7 @@ function drawCircle(){
     context.fillStyle="white";
     context.arc(width, 0, 400, 0, Math.PI*2,0);
     context.fill();
-
+    
     context.beginPath();
     context.fillStyle="white";
     context.arc(0, height, 400, 0, Math.PI*2,0);
@@ -116,13 +116,11 @@ function drawLines(){
     context.lineWidth = 15;
     context.strokeStyle = 'white';
     context.stroke();
-
 }
 
 function drawRectangle(){
     context.beginPath();
     context.rect(width/2,height/2,150,150);
-    
     context.fillStyle="orange"
     context.fill();
     context.stroke();
