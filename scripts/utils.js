@@ -59,15 +59,6 @@ export function rgba(r, g, b, a) {
  * @param {number} degrees 
  */
 
-export function hsla (h, s, l, a){
-    return "hsl("+ h + "," + s + "," + l + "," + a + ")";
-    
-}
-
-export function hsl(h, s, l) {
-    return "hsl(" + h + "," + s + "%," + l + "%)";
-}
-
 
 export function degrees(degrees) {
     return degrees * (Math.PI / 180);

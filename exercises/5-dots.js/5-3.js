@@ -63,3 +63,4 @@ function drawDiamond(x, y) {
     context.lineTo(x, y + 20);
     context.fill();
 }
+}
