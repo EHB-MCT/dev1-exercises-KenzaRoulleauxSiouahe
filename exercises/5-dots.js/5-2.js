@@ -12,12 +12,6 @@ drawMaze();
 
  function drawMaze(){
     context.lineWidth= 5;
-<<<<<<< HEAD
-
-    Utils.drawLine(0, 0, spacing, spacing);
-
-    
-=======
     context.lineCap = 'round';
 
     context.fillRect(0, 0,width, height);
@@ -36,5 +30,4 @@ drawMaze();
                 Utils.drawLine(spacing + i * spacing, j * spacing, i * spacing, spacing + j *spacing);
             }
     }
->>>>>>> 3a3bc16b6dc5056fb096363f052b18fac394b789
 }
