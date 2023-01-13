@@ -13,10 +13,10 @@ function draw() {
 }
 
 function drawSunBeams() {
-    let i = 50;
-    while (i <= ) {
-        Utils.drawLine(, , , , );
-        Utils.drawLine(, , , , );
-        i = i + 10;
+    let i = 0;
+    while (i <= 35) {
+        Utils.drawLine(50, 50, i * 10, 350);
+        Utils.drawLine(50, 50, 350, i * 10);
+        i++;
     }
 }

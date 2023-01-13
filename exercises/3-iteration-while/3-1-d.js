@@ -15,7 +15,11 @@ function draw() {
 function drawDiagonalLines() {
     let i = 0;
     while (i <= 6) {
-        Utils.drawLine(50+(i*25),200 +(i*25),200 +(i*25),50+(i*25) );
-        i++ ;
+        let x1 = 50 + i * 25;
+        let y1 = 200 + i * 25;
+        let x2 = 200 + i * 25;
+        let y2 = 50 + i * 25;
+        Utils.drawLine(x1, y1, x2, y2);
+        i = i + 1;
     }
 }
