@@ -24,6 +24,14 @@ export function hsl(h, s, l) {
     return "hsl(" + h + "," + s + "%," + l + "%)";
 }
 
+export function rgb(r, g, b) {
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+
+export function rgba(r, g, b, a) {
+    return "rgb(" + r + "," + g + "," + b + "," + a + "%)";
+}
+
 export function degrees(degrees) {
     return degrees * (Math.PI / 180);
 }
@@ -58,6 +66,11 @@ export function fillEllipse(x, y, rX, rY) {
     context.beginPath();
     context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
     context.fill();
+}
+export function strokeEllipse(x, y, rX, rY) {
+    context.beginPath();
+    context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
+    context.stroke();
 }
 
 export function fillAndStrokeCircle(x, y, radius) {
