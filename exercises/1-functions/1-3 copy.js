@@ -1,66 +1,51 @@
 "use strict";
 
-let canvas = document.querySelector('canvas');
+let canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-let context = canvas.getContext('2d');
+let context = canvas.getContext("2d");
 
-colorBox();
-function colorBox() {
+drawRect();
 
-//links boven groot
-context.beginPath();
-    context.rect(50,50,150,150)
-    context.strokeStyle = 'red';
-    context.stroke();
+function drawRect() {
+	//links boven grote
+	context.beginPath();
+	context.rect(50, 50, 200, 200);
+	context.strokeStyle = "red";
+	context.stroke();
 
-//links onder gemideld  
-context.beginPath();
-    context.rect(75,275,50,50)
-    context.strokeStyle = 'red';
-    context.stroke();
+	//rechts boven middel rood
+	context.beginPath();
+	context.rect(350, 100, 50, 50);
+	context.strokeStyle = "red";
+	context.stroke();
 
-//links onder klein
-context.beginPath();
-    context.rect(50,325,25,25)
-    context.strokeStyle = 'black';
-    context.fill();
-    context.stroke();
+	//rechts boven kleine zwarte
+	context.beginPath();
+	context.rect(400, 75, 25, 25);
+	context.fill();
 
-//rechts boven gemmideld
-context.beginPath();
-    context.rect(275,75,50,50)
-    context.strokeStyle = 'red';
-    context.stroke();
+	//links onder midden rood
+	context.beginPath();
+	context.rect(100, 350, 50, 50);
+	context.strokeStyle = "red";
+	context.stroke();
 
-//rechts boven klein
-context.beginPath();
-    context.rect(325,50,25,25)
-    context.strokeStyle = 'black';
-    context.fill();
-    context.stroke();
+	//links onder kleine zwarte
+	context.beginPath();
+	context.rect(75, 400, 25, 25);
+	context.fill();
 
-//rechts onder groot
-context.beginPath();
-    context.rect(200,200,150,150)
-    context.strokeStyle = 'red';
-    context.stroke();
+	//rechts onder grote rode
+	context.beginPath();
+	context.rect(250, 250, 200, 200);
+	context.strokeStyle = "red";
+	context.stroke();
 
-//midden groot
-context.beginPath();
-    context.rect(125,125,150,150)
-    context.strokeStyle = 'red';
-    context.fill();
-    context.stroke();
-
-
-
-
-
-
-
-
-
-
-    
+	//midden zwarte
+	context.beginPath();
+	context.rect(150, 150, 200, 200);
+	context.strokeStyle = "red";
+	context.fill();
+	context.stroke();
 }
